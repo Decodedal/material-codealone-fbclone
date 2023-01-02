@@ -1,11 +1,11 @@
 import { Button, styled, Typography } from "@mui/material";
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt';
 import { Add } from "@mui/icons-material";
-import { color } from "@mui/system";
 
-const BlueButton = styled(Button)({
-  backgroundColor:"skyblue",
-  color:"gray",
+
+const BlueButton = styled(Button)(({theme}) => ({
+  backgroundColor:theme.palette.otherColor.main,
+  color:"white",
   margin:5,
   "&:hover":{
     backgroundColor:"lightblue"
@@ -14,12 +14,12 @@ const BlueButton = styled(Button)({
     bgcolor:"gray",
     color:"white"
   },
-});
+}));
 
 function App() {
   return (
     <div className="App">
-        <Button variant="text">Text</Button>
+        <Button color="otherColor" variant="text">Text</Button>
         <Button startIcon={<ElectricBoltIcon/>} size="small" color="secondary" variant="contained">Contained</Button>
         <Button startIcon={<Add/>} size="small" color="success" variant="contained">add new post</Button>
         <Button variant="outlined">Outlined</Button>
