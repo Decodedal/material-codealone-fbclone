@@ -6,7 +6,7 @@ const Rigthbar = () => {
     <Box flex={2} p={2} sx={{display:{xs:'none', sm:"block"}}}>
       <Box position="fixed" width={350}>
       <Typography variant='h6' fontWeight={100}>Online Friends</Typography>
-      <AvatarGroup max={4}>
+      <AvatarGroup max={4} sx={{marginRight:"5rem"}}>
         <Avatar alt="kit cat" src='http://placekitten.com/g/200/300'/>
         <Avatar alt="kit cat" src='http://placekitten.com/g/400/300'/>
         <Avatar alt="kit cat" src='http://placekitten.com/g/200/400'/>
